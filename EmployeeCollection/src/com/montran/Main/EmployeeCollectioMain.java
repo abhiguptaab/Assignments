@@ -16,7 +16,7 @@ public class EmployeeCollectioMain {
 		
 		EmployeeCollectionUtil util = new EmployeeCollectionUtil();
 		
-		System.out.println("No Books Present right Now");
+		System.out.println("No Employees Present right Now");
 		int userchoice;
 		
 		while(true){
@@ -25,7 +25,7 @@ public class EmployeeCollectioMain {
 			System.out.println("2. Add Multiple Employee");
 			System.out.println("3. Update existing Employee");
 			System.out.println("4. Delete existing Employee");
-			System.out.println("5. Print Single Book Employee");
+			System.out.println("5. Print Single  Employee");
 			System.out.println("6. Exit");
 			
 			System.out.println("Enter Your Choice");
@@ -44,7 +44,7 @@ public class EmployeeCollectioMain {
 				util.addNewEmployee(employee);
 				break;
 			case 2:
-				System.out.println("How Many Books Do You Want to add?");
+				System.out.println("How Many Employees Do You Want to add?");
 				int numberAddBook = sc.nextInt();
 				for(int i=0; i<numberAddBook; i++) {
 					System.out.println("Accept  id");
@@ -52,7 +52,7 @@ public class EmployeeCollectioMain {
 					System.out.println("Accept Name");
 					name = sc.nextLine();
 					name =sc.nextLine();
-					System.out.println("Accept  price");
+					System.out.println("Accept  salary");
 					salary = sc.nextDouble();
 					Employee[] employees = new Employee[numberAddBook];
 					employees[i] = new Employee(employeeId, name, salary);
@@ -98,7 +98,7 @@ public class EmployeeCollectioMain {
 				Employee employeeidcheck = util.showSingleEmployee(employeeidshow);
 				
 				if(employeeidcheck == null) {
-					System.out.println("Book is not resent");
+					System.out.println("Employee is not resent");
 				}
 				System.out.println(employeeidcheck);
 		
